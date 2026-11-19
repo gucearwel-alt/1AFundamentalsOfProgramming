@@ -1,0 +1,25 @@
+public class TempTracker {
+‎    public static void main(String[] args) {
+‎
+‎        double[] temperatures = new double[5];    //gumawa ako dito ng array na kayang maglaman ng 5 halaga 
+‎
+‎        temperatures[0] = 32.5;  // day 1
+‎        temperatures[1] = 34.0;  // day 2
+‎        temperatures[2] = 31.8;  // day 3
+‎        temperatures[3] = 33.2;  // day 4
+‎        temperatures[4] = 35.1;  // day 5
+‎// dito naman ay naglagay tayo ng mga value gamit ang index na laging nagsisismula sa 0
+‎
+‎        System.out.println("=== Mga Temperatura ===");
+‎        for (int i = 0; i < temperatures.length; i++) {
+‎            // Ipinakita natin rito ang araw at ang temperatura
+‎            System.out.println("Araw " + (i + 1) + ": " + temperatures[i] + "°C");
+‎        }   // dito naman ay gumamit tayo ng for loop upang maipakita ang lahat ng temperature
+‎
+‎        temperatures[2] = 32.0;   // dito ay  binago ang temperatura ng index 2
+‎
+‎        System.out.println("\nNa-update na temperatura ng Araw 3: " + temperatures[2] + "°C");   // dito ay ipinakita natkn ang inupdate na temperatura ng ikatlong araw
+‎
+‎    }
+‎}
+‎
