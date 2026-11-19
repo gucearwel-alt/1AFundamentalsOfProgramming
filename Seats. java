@@ -1,0 +1,18 @@
+import java.util.Arrays;
+‎
+‎public class Seats {
+‎    public static void main(String[] args) {
+‎       
+‎        String[][] seats = {
+‎            {"Alice", "Bob", "Charlie"},   // ito ang row 1
+‎            {"David", "Emma", "Frank"}     // ito naman ang row  2
+‎        };
+‎
+‎        System.out.println("Second row, third column: " + seats[1][2]);   // sa Java ang index ay nagsisimula sa 0 na ang kaya't ang hanay 1 natin ay nasa row 2, kaya't kukunin natin ang name sa third column ng row 2
+‎
+‎        seats[0][1] = "Vacant";   // dito naman pinalitan natin ng Vacant ang pangalamg Bob
+‎
+‎        System.out.println("Updated seating arrangement: " + Arrays.deepToString(seats));   //at dito naman gumamit Array.deepToString upang ipakita ang ayos ng upuan
+‎    }
+‎}
+‎
