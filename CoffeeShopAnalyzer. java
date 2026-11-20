@@ -1,0 +1,62 @@
+public class CoffeeShopAnalyzer {  // ito ang ating pangaln ng program
+‎
+‎
+‎    public static void main(String[] args) {  //ito ang method na ginagamit upang mapatakbo ang program
+‎      
+‎        int[] weeklySales = {120, 145, 130, 155, 180, 210, 195};  // ito ang bilang ng nabenta bawat araw
+‎      
+‎        String[] daysOfWeek = {"Monday", "Tuesday", "Wednesday", "Thursday", 
+‎                               "Friday", "Saturday", "Sunday"};  //ito naman ang pangalan ng mga araw
+‎
+‎        System.out.println("--- Daily Sales ---");  //nagprint naman tayo dito ng Title
+‎        
+‎        for (int i = 0; i < weeklySales.length; i++) {   // dito ay magu-ulit mula 0 hanggang sa last dahil sa for loop at binabalik ang dami ng laman
+‎
+‎            System.out.println(daysOfWeek[i] + " sales: " + weeklySales[i]);
+‎        } // dito nama'y ipapakita ang pangalan ng araw at ang bilang ng nabenta
+‎
+‎        int totalSales = 0; // variable na nagsisimula sa 0
+‎        
+‎     
+‎        for (int dailySale : weeklySales) {   // dadaan ang bawat numero sa Weeklysales
+‎          
+‎            totalSales += dailySale; 
+‎        }  // dito ay idadagdag ang current sale sa totalSales
+‎      
+‎        double averageSales = (double) totalSales / weeklySales.length; //dito ay cinompute ang karaniwang benta na ginamitan ng double
+‎       
+‎        System.out.println("\n--- Weekly Summary ---");
+‎        System.out.println("Total Sales: " + totalSales + " cups");  //dito ay pinapakita ang kabuuang benta sa buong linggo
+‎        
+‎   
+‎        System.out.printf("Average Daily Sales: %.2f cups\n", averageSales);  //dito pinapakita ang number pagtapos ng point
+‎        
+‎        int maxSales = weeklySales[0];  //pinakamataas na araw sa simula
+‎      
+‎        int minSales = weeklySales[0]; //pinakamababa na araw sa simula
+‎     
+‎        String bestDay = daysOfWeek[0];  // tinatandaan ang araw na may pinakamataas ang benta
+‎        
+‎        String worstDay = daysOfWeek[0]; // tinatandaan ang araw na may pinakamababang benta
+‎
+‎        for (int i = 1; i < weeklySales.length; i++) { // sa pangalawa na magsisimula sapagkat tapos ng suriing ang una
+‎            
+‎        
+‎            if (weeklySales[i] > maxSales) { //tinitignan kung mas mataas ang kasalukuyabg araw sa pinakamataas
+‎                maxSales = weeklySales[i];    // Ito na ang bagong pinakamataas
+‎                bestDay = daysOfWeek[i];       // tinatandaan ang araw na ito
+‎            }
+‎        
+‎            if (weeklySales[i] < minSales) { // tinitignan kung mas mababa ang kasalukuyang araw kesa sa pinakamababa
+‎                minSales = weeklySales[i];     // Ito na ang bagong pinakamababa
+‎                worstDay = daysOfWeek[i];       // tinatandaan ang araw na ito
+‎            }
+‎        }
+‎        
+‎     
+‎        System.out.println("\n--- Best and Worst Days ---"); ipinapakita rito ang pinakamaganda at pinakapangit na arw ng benta
+‎        System.out.println("Best day was " + bestDay + " with " + maxSales + " cups.");
+‎        System.out.println("Slowest day was " + worstDay + " with " + minSales + " cups.");
+‎    }
+‎}
+‎
