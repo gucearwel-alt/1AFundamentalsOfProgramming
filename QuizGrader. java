@@ -1,0 +1,46 @@
+public class QuizGrader {  // ito ang pangalan ng program
+‎
+‎    public static void main(String[] args) { // ito ang ginagamit na method at dito nagsisimula ang program
+‎  
+‎        char[] answerKey = {'A', 'C', 'B', 'D', 'A', 'C', 'C', 'B', 'A', 'D'}; //ito ay naglalaman ng tamang sagot sa 10 na tanong
+‎       
+‎        char[] studentAnswers = {'A', 'B', 'B', 'D', 'C', 'C', 'C', 'B', 'A', 'A'}; // ito ay naglalaman ng sagot ng mga estudyante
+‎ 
+‎        int correctCount = 0; //bilang ng mga tamang sagot na nagsisimula sa 0
+‎        
+‎        System.out.println("--- Quiz Results ---"); //dito ay piniprint ang resulta ng Quiz
+‎       
+‎        for (int i = 0; i < answerKey.length; i++) //dito ay umuulit ng 10 beses, isa sa bawat tanong{
+‎           
+‎            if (studentAnswers[i] == answerKey[i]) { //tinitignan dito kung tama ang sagot ng estudyante sa tamang sagot
+‎                correctCount++;  // Dagdagan ang bilang ng tama ng 1
+‎            } else {
+‎                // Kung mali ay ipapakita kung anong tanong ang mali
+‎                
+‎                System.out.println("Question " + (i + 1) + ": Incorrect. " +
+‎                                   "You answered '" + studentAnswers[i] + 
+‎                                   "', correct answer is '" + answerKey[i] + "'."); //ginamitang dito ng i+1 upang magsimula sa 1 imbes na 0
+‎            }
+‎        }
+‎    
+‎        double scorePercentage = (double) correctCount / answerKey.length * 100; //dito cinalculate ang porsyento na ginamitan ng double upang magkaron ng decimal
+‎        
+‎        System.out.println("\n--- Final Score ---");
+‎        System.out.println("Correct Answers: " + correctCount + "/" + answerKey.length);
+‎        
+‎        // %.1f — isang numero lang pagkatapos ng tuldok
+‎        System.out.printf("Score: %.1f%%\n", scorePercentage); // dito ay gumamit ng %.1f upang maging isang numero lang pagtapos ng tuldok
+‎        
+‎     
+‎      
+‎     
+‎        if (scorePercentage >= 70.0) {
+‎            System.out.println("Result: PASS "); // kung higit sa 70% ay pumasa
+‎        } 
+‎   
+‎        else {
+‎            System.out.println("Result: FAIL "); kung mas mababa sa 70% ay bagsak
+‎        }
+‎    }
+‎}
+‎
